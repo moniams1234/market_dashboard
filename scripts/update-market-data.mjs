@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import vm from "node:vm";
 
-const DATA_FILE = new URL("../market_data.js", import.meta.url);
+const DATA_FILE = new URL("../public/market_data.js", import.meta.url);
 const WARSAW_TZ = "Europe/Warsaw";
 const isScheduledRun = process.env.GITHUB_EVENT_NAME === "schedule";
 

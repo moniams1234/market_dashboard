@@ -20,7 +20,7 @@ Workflow można także uruchomić ręcznie w zakładce **Actions → Daily marke
 3. Pozostaw framework jako **Other** i wdroż projekt bez komendy build.
 4. Włącz automatyczne deploymenty z brancha `main`.
 
-Dashboard jest zapisany jako standardowy `index.html`, dlatego Vercel udostępnia go bezpośrednio pod adresem głównym `/`.
+Dashboard i dane znajdują się w katalogu `public/`, który Vercel traktuje jako wynik statycznego deploymentu dla presetu **Other**. Standardowy `public/index.html` jest udostępniany bezpośrednio pod adresem głównym `/`.
 
 ## Aktualizacja lokalna
 
