@@ -8,19 +8,19 @@ window.MARKET_DATA = {
       "icon": "↓",
       "type": "neg",
       "title": "S&P 500 spada",
-      "sub": "Ostatni odczyt: 7524,94 pkt (-0,17%)."
+      "sub": "Ostatni odczyt: 7521,63 pkt (-0,21%)."
     },
     {
       "icon": "↑",
       "type": "pos",
       "title": "Ropa Brent",
-      "sub": "79,92 USD/bbl (2,44%)."
+      "sub": "80,08 USD/bbl (2,64%)."
     },
     {
       "icon": "↓",
       "type": "neg",
       "title": "Bitcoin",
-      "sub": "62 214 USD (-1,55%)."
+      "sub": "62 271 USD (-1,46%)."
     },
     {
       "icon": "↑",
@@ -34,27 +34,27 @@ window.MARKET_DATA = {
       "id": "sp500",
       "label": "S&P 500",
       "sub": "USA · 13 lip",
-      "value": "7524,94",
-      "change": -0.17,
-      "changePt": "-12,49 pkt",
+      "value": "7521,63",
+      "change": -0.21,
+      "changePt": "-15,80 pkt",
       "dir": "dn"
     },
     {
       "id": "nasdaq",
       "label": "Nasdaq Composite",
       "sub": "USA · 13 lip",
-      "value": "25 946,67",
-      "change": -0.67,
-      "changePt": "-174,49 pkt",
+      "value": "25 911,45",
+      "change": -0.8,
+      "changePt": "-209,71 pkt",
       "dir": "dn"
     },
     {
       "id": "dow",
       "label": "Dow Jones",
       "sub": "USA · 13 lip",
-      "value": "52 383,09",
-      "change": -1.27,
-      "changePt": "-672,82 pkt",
+      "value": "52 444,52",
+      "change": -1.15,
+      "changePt": "-611,39 pkt",
       "dir": "dn"
     },
     {
@@ -206,24 +206,24 @@ window.MARKET_DATA = {
     {
       "name": "Bitcoin",
       "ticker": "BTC/USD",
-      "value": "$62 214",
-      "change": -1.55,
+      "value": "$62 271",
+      "change": -1.46,
       "dir": "dn",
       "color": "#b56a00"
     },
     {
       "name": "Ethereum",
       "ticker": "ETH/USD",
-      "value": "$1769",
-      "change": 1.4,
+      "value": "$1770",
+      "change": 1.46,
       "dir": "up",
       "color": "#4a5a9a"
     },
     {
       "name": "Solana",
       "ticker": "SOL/USD",
-      "value": "$75,36",
-      "change": -3.44,
+      "value": "$75,23",
+      "change": -3.61,
       "dir": "dn",
       "color": "#6b3fd1"
     }
@@ -330,29 +330,29 @@ window.MARKET_DATA = {
   "commodities": [
     {
       "name": "Złoto",
-      "value": "$4019/oz",
-      "change": -1.27,
+      "value": "$4003/oz",
+      "change": -1.67,
       "dir": "dn",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     },
     {
       "name": "Ropa Brent",
-      "value": "$79,92/bbl",
-      "change": 2.44,
+      "value": "$80,08/bbl",
+      "change": 2.64,
       "dir": "up",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     },
     {
       "name": "Miedź",
-      "value": "$6,30/lb",
-      "change": 4.11,
+      "value": "$6,28/lb",
+      "change": 3.65,
       "dir": "up",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     },
     {
       "name": "Pszenica",
-      "value": "$638,25 USc/bu",
-      "change": 6.46,
+      "value": "$637,50 USc/bu",
+      "change": 6.34,
       "dir": "up",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     }
@@ -827,14 +827,14 @@ window.MARKET_DATA = {
     }
   ],
   "narrative": [
-    "S&P 500: 7524,94 pkt (-0,17%), Nasdaq: 25 946,67 pkt.",
+    "S&P 500: 7521,63 pkt (-0,21%), Nasdaq: 25 911,45 pkt.",
     "EUR/PLN według NBP: 4,3281, USD/PLN: 3,7846.",
     "Dane zostały odświeżone automatycznie 13 lipca 2026 · poniedziałek o 09:00 czasu polskiego; notowania mogą pochodzić z ostatniej zakończonej sesji."
   ],
   "archive": [
     {
       "date": "2026-07-13",
-      "title": "Automatyczna aktualizacja: S&P 500 -0,17%, EUR/PLN 4,3281"
+      "title": "Automatyczna aktualizacja: S&P 500 -0,21%, EUR/PLN 4,3281"
     },
     {
       "date": "2026-07-10",
