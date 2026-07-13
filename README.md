@@ -13,6 +13,24 @@ Jeżeli pobieranie kluczowych danych nie powiedzie się, skrypt kończy działan
 
 Workflow można także uruchomić ręcznie w zakładce **Actions → Daily market data update → Run workflow**.
 
+## Codzienny e-mail z Gmaila
+
+Po udanej aktualizacji workflow wysyła krótkie podsumowanie walut i surowców przez Gmail SMTP. Dane dostępowe nie są zapisywane w kodzie — należy dodać je w repozytorium GitHub w **Settings → Secrets and variables → Actions → New repository secret**:
+
+| Secret | Wartość |
+| --- | --- |
+| `GMAIL_USER` | Pełny adres konta Google, z którego ma wychodzić wiadomość |
+| `GMAIL_APP_PASSWORD` | 16-znakowe hasło aplikacji Google, bez zwykłego hasła do konta |
+| `MARKET_EMAIL_TO` | Adres odbiorcy; kilka adresów można rozdzielić przecinkami |
+
+Konto Google musi mieć włączoną weryfikację dwuetapową. Następnie w ustawieniach konta Google należy utworzyć osobne **Hasło aplikacji** dla dashboardu i wkleić je jako `GMAIL_APP_PASSWORD`.
+
+Treść wiadomości można sprawdzić lokalnie bez jej wysyłania:
+
+```powershell
+python scripts/send-market-email.py --preview
+```
+
 ## Vercel
 
 1. W Vercel wybierz **Add New → Project**.

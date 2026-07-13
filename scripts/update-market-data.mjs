@@ -5,6 +5,12 @@ const DATA_FILE = new URL("../public/market_data.js", import.meta.url);
 const WARSAW_TZ = "Europe/Warsaw";
 const isScheduledRun = process.env.GITHUB_EVENT_NAME === "schedule";
 
+async function setUpdatedOutput(value) {
+  if (process.env.GITHUB_OUTPUT) {
+    await fs.appendFile(process.env.GITHUB_OUTPUT, `updated=${value}\n`, "utf8");
+  }
+}
+
 const warsawParts = Object.fromEntries(
   new Intl.DateTimeFormat("en-CA", {
     timeZone: WARSAW_TZ,
@@ -21,6 +27,7 @@ const warsawParts = Object.fromEntries(
 // a ten warunek wybiera właściwe 09:00 również po zmianie czasu w Polsce.
 if (isScheduledRun && warsawParts.hour !== "09") {
   console.log(`Pominięto: w Warszawie jest ${warsawParts.hour}:00, nie 09:00.`);
+  await setUpdatedOutput(false);
   process.exit(0);
 }
 
@@ -290,4 +297,5 @@ const failures = [
 if (failures.length) console.warn("Częściowe błędy źródeł:", failures.join(" | "));
 
 await fs.writeFile(DATA_FILE, `window.MARKET_DATA = ${JSON.stringify(data, null, 2)};\n`, "utf8");
+await setUpdatedOutput(true);
 console.log(`Zaktualizowano ${DATA_FILE.pathname}: ${successfulQuotes} poprawnych kwotowań.`);

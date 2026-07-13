@@ -28,6 +28,7 @@ jobs:
           node-version: "22"
 
       - name: Update market data
+        id: update
         run: node scripts/update-market-data.mjs
         env:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
@@ -43,3 +44,11 @@ jobs:
           git add public/market_data.js
           git commit -m "Update daily market data"
           git push
+
+      - name: Send Gmail market summary
+        if: steps.update.outputs.updated == 'true'
+        run: python3 scripts/send-market-email.py
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MARKET_EMAIL_TO: ${{ secrets.MARKET_EMAIL_TO }}
