@@ -2,25 +2,25 @@ window.MARKET_DATA = {
   "date": "2026-07-13",
   "dateLabel": "13 lipca 2026 · poniedziałek",
   "generatedLabel": "Automatyczna aktualizacja o 09:00 Europe/Warsaw · indeksy, krypto i surowce: Yahoo Finance · waluty: NBP",
-  "heroTitle": "Globalny rynek rozpoczyna dzień na plusie",
+  "heroTitle": "Globalny rynek rozpoczyna dzień ostrożnie",
   "today": [
     {
-      "icon": "↑",
-      "type": "pos",
-      "title": "S&P 500 rośnie",
-      "sub": "Ostatni odczyt: 7546,89 pkt (+0,13%)."
+      "icon": "↓",
+      "type": "neg",
+      "title": "S&P 500 spada",
+      "sub": "Ostatni odczyt: 7524,94 pkt (-0,17%)."
     },
     {
       "icon": "↑",
       "type": "pos",
       "title": "Ropa Brent",
-      "sub": "79,71 USD/bbl (2,17%)."
+      "sub": "79,92 USD/bbl (2,44%)."
     },
     {
-      "icon": "↑",
-      "type": "pos",
+      "icon": "↓",
+      "type": "neg",
       "title": "Bitcoin",
-      "sub": "64 172 USD (1,55%)."
+      "sub": "62 214 USD (-1,55%)."
     },
     {
       "icon": "↑",
@@ -34,27 +34,27 @@ window.MARKET_DATA = {
       "id": "sp500",
       "label": "S&P 500",
       "sub": "USA · 13 lip",
-      "value": "7546,89",
-      "change": 0.13,
-      "changePt": "+9,46 pkt",
-      "dir": "up"
+      "value": "7524,94",
+      "change": -0.17,
+      "changePt": "-12,49 pkt",
+      "dir": "dn"
     },
     {
       "id": "nasdaq",
       "label": "Nasdaq Composite",
       "sub": "USA · 13 lip",
-      "value": "26 057,90",
-      "change": -0.24,
-      "changePt": "-63,26 pkt",
+      "value": "25 946,67",
+      "change": -0.67,
+      "changePt": "-174,49 pkt",
       "dir": "dn"
     },
     {
       "id": "dow",
       "label": "Dow Jones",
       "sub": "USA · 13 lip",
-      "value": "52 517,38",
-      "change": -1.02,
-      "changePt": "-538,53 pkt",
+      "value": "52 383,09",
+      "change": -1.27,
+      "changePt": "-672,82 pkt",
       "dir": "dn"
     },
     {
@@ -70,18 +70,18 @@ window.MARKET_DATA = {
       "id": "dax",
       "label": "DAX",
       "sub": "Niemcy · 13 lip",
-      "value": "25 123,13",
-      "change": -2.69,
-      "changePt": "-694,76 pkt",
+      "value": "25 114,25",
+      "change": -2.73,
+      "changePt": "-703,64 pkt",
       "dir": "dn"
     },
     {
       "id": "ftse",
       "label": "FTSE 100",
       "sub": "UK · 13 lip",
-      "value": "10 500,10",
-      "change": -1.42,
-      "changePt": "-151,70 pkt",
+      "value": "10 498,29",
+      "change": -1.44,
+      "changePt": "-153,51 pkt",
       "dir": "dn"
     },
     {
@@ -206,24 +206,24 @@ window.MARKET_DATA = {
     {
       "name": "Bitcoin",
       "ticker": "BTC/USD",
-      "value": "$64 172",
-      "change": 1.55,
-      "dir": "up",
+      "value": "$62 214",
+      "change": -1.55,
+      "dir": "dn",
       "color": "#b56a00"
     },
     {
       "name": "Ethereum",
       "ticker": "ETH/USD",
-      "value": "$1833",
-      "change": 5.08,
+      "value": "$1769",
+      "change": 1.4,
       "dir": "up",
       "color": "#4a5a9a"
     },
     {
       "name": "Solana",
       "ticker": "SOL/USD",
-      "value": "$77,54",
-      "change": -0.65,
+      "value": "$75,36",
+      "change": -3.44,
       "dir": "dn",
       "color": "#6b3fd1"
     }
@@ -330,29 +330,29 @@ window.MARKET_DATA = {
   "commodities": [
     {
       "name": "Złoto",
-      "value": "$4021/oz",
-      "change": -1.22,
+      "value": "$4019/oz",
+      "change": -1.27,
       "dir": "dn",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     },
     {
       "name": "Ropa Brent",
-      "value": "$79,71/bbl",
-      "change": 2.17,
+      "value": "$79,92/bbl",
+      "change": 2.44,
       "dir": "up",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     },
     {
       "name": "Miedź",
-      "value": "$6,32/lb",
-      "change": 4.44,
+      "value": "$6,30/lb",
+      "change": 4.11,
       "dir": "up",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     },
     {
       "name": "Pszenica",
-      "value": "$638,50 USc/bu",
-      "change": 6.51,
+      "value": "$638,25 USc/bu",
+      "change": 6.46,
       "dir": "up",
       "note": "automatyczny odczyt Yahoo Finance · 13 lip"
     }
@@ -827,14 +827,14 @@ window.MARKET_DATA = {
     }
   ],
   "narrative": [
-    "S&P 500: 7546,89 pkt (+0,13%), Nasdaq: 26 057,90 pkt.",
+    "S&P 500: 7524,94 pkt (-0,17%), Nasdaq: 25 946,67 pkt.",
     "EUR/PLN według NBP: 4,3281, USD/PLN: 3,7846.",
     "Dane zostały odświeżone automatycznie 13 lipca 2026 · poniedziałek o 09:00 czasu polskiego; notowania mogą pochodzić z ostatniej zakończonej sesji."
   ],
   "archive": [
     {
       "date": "2026-07-13",
-      "title": "Automatyczna aktualizacja: S&P 500 0,13%, EUR/PLN 4,3281"
+      "title": "Automatyczna aktualizacja: S&P 500 -0,17%, EUR/PLN 4,3281"
     },
     {
       "date": "2026-07-10",
