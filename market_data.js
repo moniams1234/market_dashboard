@@ -1,138 +1,852 @@
-﻿window.MARKET_DATA = {
-  date: "2026-06-09",
-  dateLabel: "9 czerwca 2026 · wtorek",
-  generatedLabel: "Migawka rynkowa z 9 czerwca 2026; USA po zamknieciu, czesc Europy/FX/krypto jako dane intraday z dostepnych serwisow",
-  today: [
-    { icon:"◆", type:"ind", title:"Wall Street mieszana", sub:"S&P 500 +0,30%, Nasdaq +0,86%, Dow -0,16% po rotacji w strone technologii." },
-    { icon:"↑", type:"pos", title:"Europa i Azja selektywne", sub:"Nikkei mocno w gore, DAX slabiej, FTSE blisko zera; GPW w poludnie dodatnia." },
-    { icon:"↓", type:"neg", title:"Krypto pod presja", sub:"Bitcoin ok. 62,6 tys. USD, slabiej dzien do dnia; Solana rowniez na minusie." },
-    { icon:"◆", type:"ind", title:"USD/PLN nizej rano", sub:"Dolar ok. 3,68 PLN, EUR/PLN ok. 4,24; zloty stabilniejszy niz w poprzedniej migawce." }
+window.MARKET_DATA = {
+  "date": "2026-07-13",
+  "dateLabel": "13 lipca 2026 · poniedziałek",
+  "generatedLabel": "Automatyczna aktualizacja o 09:00 Europe/Warsaw · indeksy, krypto i surowce: Yahoo Finance · waluty: NBP",
+  "heroTitle": "Globalny rynek rozpoczyna dzień na plusie",
+  "today": [
+    {
+      "icon": "↑",
+      "type": "pos",
+      "title": "S&P 500 rośnie",
+      "sub": "Ostatni odczyt: 7546,89 pkt (+0,13%)."
+    },
+    {
+      "icon": "↑",
+      "type": "pos",
+      "title": "Ropa Brent",
+      "sub": "79,71 USD/bbl (2,17%)."
+    },
+    {
+      "icon": "↑",
+      "type": "pos",
+      "title": "Bitcoin",
+      "sub": "64 172 USD (1,55%)."
+    },
+    {
+      "icon": "↑",
+      "type": "pos",
+      "title": "WIG20 i złoty",
+      "sub": "WIG20: 3772,63 pkt (0,08%); EUR/PLN: 4,3281."
+    }
   ],
-  indices: [
-    { id:"sp500", label:"S&P 500", sub:"USA · zamkniecie", value:"7 405,73", change:0.30, changePt:"+21,99 pkt", dir:"up" },
-    { id:"nasdaq", label:"Nasdaq Composite", sub:"USA · zamkniecie", value:"25 929,66", change:0.86, changePt:"+220,23 pkt", dir:"up" },
-    { id:"dow", label:"Dow Jones", sub:"USA · zamkniecie", value:"50 786,01", change:-0.16, changePt:"-80,77 pkt", dir:"dn" },
-    { id:"wig20", label:"WIG20", sub:"Polska · intraday 12:36", value:"3 656,97", change:0.78, changePt:"+28,41 pkt", dir:"up" },
-    { id:"dax", label:"DAX", sub:"Niemcy · 9 czerwca", value:"24 616", change:-0.58, changePt:"dane dzienne", dir:"dn" },
-    { id:"ftse", label:"FTSE 100", sub:"UK · 9 czerwca", value:"10 373", change:0.05, changePt:"dane dzienne", dir:"up" },
-    { id:"nikkei", label:"Nikkei 225", sub:"Japonia · 9 czerwca", value:"65 158", change:1.77, changePt:"dane dzienne", dir:"up" },
-    { id:"hsi", label:"Hang Seng", sub:"Hong Kong · 9 czerwca", value:"24 657", change:0.10, changePt:"dane dzienne", dir:"up" }
+  "indices": [
+    {
+      "id": "sp500",
+      "label": "S&P 500",
+      "sub": "USA · 13 lip",
+      "value": "7546,89",
+      "change": 0.13,
+      "changePt": "+9,46 pkt",
+      "dir": "up"
+    },
+    {
+      "id": "nasdaq",
+      "label": "Nasdaq Composite",
+      "sub": "USA · 13 lip",
+      "value": "26 057,90",
+      "change": -0.24,
+      "changePt": "-63,26 pkt",
+      "dir": "dn"
+    },
+    {
+      "id": "dow",
+      "label": "Dow Jones",
+      "sub": "USA · 13 lip",
+      "value": "52 517,38",
+      "change": -1.02,
+      "changePt": "-538,53 pkt",
+      "dir": "dn"
+    },
+    {
+      "id": "wig20",
+      "label": "WIG20",
+      "sub": "Polska · 13 lip",
+      "value": "3772,63",
+      "change": 0.08,
+      "changePt": "+3,13 pkt",
+      "dir": "up"
+    },
+    {
+      "id": "dax",
+      "label": "DAX",
+      "sub": "Niemcy · 13 lip",
+      "value": "25 123,13",
+      "change": -2.69,
+      "changePt": "-694,76 pkt",
+      "dir": "dn"
+    },
+    {
+      "id": "ftse",
+      "label": "FTSE 100",
+      "sub": "UK · 13 lip",
+      "value": "10 500,10",
+      "change": -1.42,
+      "changePt": "-151,70 pkt",
+      "dir": "dn"
+    },
+    {
+      "id": "nikkei",
+      "label": "Nikkei 225",
+      "sub": "Japonia · 13 lip",
+      "value": "67 242,73",
+      "change": -1.49,
+      "changePt": "-1014,23 pkt",
+      "dir": "dn"
+    },
+    {
+      "id": "hsi",
+      "label": "Hang Seng",
+      "sub": "Hong Kong · 13 lip",
+      "value": "24 213,72",
+      "change": 2.53,
+      "changePt": "+597,40 pkt",
+      "dir": "up"
+    }
   ],
-  indexLegend: [
-    { id:"sp500", name:"S&P 500", desc:"500 najwiekszych spolek USA; globalny benchmark apetytu na ryzyko." },
-    { id:"nasdaq", name:"Nasdaq Composite", desc:"Szeroki indeks spolek notowanych na NASDAQ, mocno wrazliwy na technologie i AI." },
-    { id:"dow", name:"Dow Jones", desc:"30 dojrzalych blue chipow USA, czesto bardziej defensywnych niz Nasdaq." },
-    { id:"wig20", name:"WIG20", desc:"20 najwiekszych i najbardziej plynnych spolek warszawskiej GPW." },
-    { id:"dax", name:"DAX", desc:"40 najwiekszych niemieckich spolek, wrazliwy na eksport i przemysl." },
-    { id:"ftse", name:"FTSE 100", desc:"Brytyjski indeks duzych spolek, z duzym udzialem energii i finansow." },
-    { id:"nikkei", name:"Nikkei 225", desc:"Japonski indeks blue chipow, wrazliwy na jena i globalny cykl." },
-    { id:"hsi", name:"Hang Seng", desc:"Gielda Hong Kongu; ekspozycja na Chiny, banki i technologie." }
+  "indexLegend": [
+    {
+      "id": "sp500",
+      "name": "S&P 500",
+      "desc": "500 największych spółek USA; globalny benchmark apetytu na ryzyko."
+    },
+    {
+      "id": "nasdaq",
+      "name": "Nasdaq Composite",
+      "desc": "Szeroki indeks spółek notowanych na NASDAQ, mocno wrażliwy na technologię i AI."
+    },
+    {
+      "id": "dow",
+      "name": "Dow Jones",
+      "desc": "30 dojrzałych blue chipów USA, często bardziej defensywnych niż Nasdaq."
+    },
+    {
+      "id": "wig20",
+      "name": "WIG20",
+      "desc": "20 największych i najbardziej płynnych spółek warszawskiej GPW."
+    },
+    {
+      "id": "dax",
+      "name": "DAX",
+      "desc": "40 największych niemieckich spółek, wrażliwy na eksport i przemysł."
+    },
+    {
+      "id": "ftse",
+      "name": "FTSE 100",
+      "desc": "Brytyjski indeks dużych spółek, z dużym udziałem energii i finansów."
+    },
+    {
+      "id": "nikkei",
+      "name": "Nikkei 225",
+      "desc": "Japoński indeks blue chipów, wrażliwy na jena i globalny cykl."
+    },
+    {
+      "id": "hsi",
+      "name": "Hang Seng",
+      "desc": "Giełda Hong Kongu; ekspozycja na Chiny, banki i technologie."
+    }
   ],
-  sectors: [
-    { name:"Polprzewodniki", change:2.40, dir:"up" },
-    { name:"Technologia", change:1.80, dir:"up" },
-    { name:"Uslugi komunikacyjne", change:1.50, dir:"up" },
-    { name:"Energia", change:1.20, dir:"up" },
-    { name:"Finanse", change:0.90, dir:"up" },
-    { name:"Dobra konsumenckie", change:0.60, dir:"up" },
-    { name:"Opieka zdrowotna", change:0.30, dir:"up" },
-    { name:"Przemysl", change:-0.10, dir:"nt" },
-    { name:"Utilities", change:-0.20, dir:"dn" },
-    { name:"Materialy", change:-0.40, dir:"dn" },
-    { name:"Nieruchomosci", change:-0.70, dir:"dn" }
+  "sectors": [
+    {
+      "name": "Energia",
+      "change": 3,
+      "dir": "up"
+    },
+    {
+      "name": "Finanse",
+      "change": 0.4,
+      "dir": "up"
+    },
+    {
+      "name": "Utilities",
+      "change": 0.2,
+      "dir": "up"
+    },
+    {
+      "name": "Dobra podstawowe",
+      "change": 0.1,
+      "dir": "up"
+    },
+    {
+      "name": "Opieka zdrowotna",
+      "change": 0,
+      "dir": "nt"
+    },
+    {
+      "name": "Przemysł",
+      "change": -0.2,
+      "dir": "dn"
+    },
+    {
+      "name": "Materiały",
+      "change": -0.4,
+      "dir": "dn"
+    },
+    {
+      "name": "Dobra konsumenckie",
+      "change": -0.5,
+      "dir": "dn"
+    },
+    {
+      "name": "Usługi komunikacyjne",
+      "change": -0.6,
+      "dir": "dn"
+    },
+    {
+      "name": "Technologia",
+      "change": -0.8,
+      "dir": "dn"
+    },
+    {
+      "name": "Półprzewodniki",
+      "change": -1.2,
+      "dir": "dn"
+    }
   ],
-  crypto: [
-    { name:"Bitcoin", ticker:"BTC/USD", value:"$62 639,66", change:-1.45, dir:"dn", color:"#b56a00" },
-    { name:"Ethereum", ticker:"ETH/USD", value:"$1 688,61", change:1.32, dir:"up", color:"#4a5a9a" },
-    { name:"Solana", ticker:"SOL/USD", value:"$65,75", change:-1.51, dir:"dn", color:"#6b3fd1" }
+  "crypto": [
+    {
+      "name": "Bitcoin",
+      "ticker": "BTC/USD",
+      "value": "$64 172",
+      "change": 1.55,
+      "dir": "up",
+      "color": "#b56a00"
+    },
+    {
+      "name": "Ethereum",
+      "ticker": "ETH/USD",
+      "value": "$1833",
+      "change": 5.08,
+      "dir": "up",
+      "color": "#4a5a9a"
+    },
+    {
+      "name": "Solana",
+      "ticker": "SOL/USD",
+      "value": "$77,54",
+      "change": -0.65,
+      "dir": "dn",
+      "color": "#6b3fd1"
+    }
   ],
-  forex: [
-    { pair:"USD/PLN", value:"3,68", change:-0.14, dir:"dn", note:"Business Insider, godz. 07:03" },
-    { pair:"EUR/PLN", value:"4,24", change:-0.04, dir:"dn", note:"Business Insider, godz. 07:03" },
-    { pair:"EUR/USD", value:"1,15", change:0.12, dir:"up", note:"Business Insider, godz. 07:03" },
-    { pair:"CHF/PLN", value:"4,61", change:-0.03, dir:"dn", note:"Business Insider, godz. 07:03" }
+  "forex": [
+    {
+      "pair": "EUR/PLN",
+      "value": "4,3281",
+      "change": -0.42,
+      "dir": "dn",
+      "note": "średni kurs NBP 2026-07-13"
+    },
+    {
+      "pair": "USD/PLN",
+      "value": "3,7846",
+      "change": -0.47,
+      "dir": "dn",
+      "note": "średni kurs NBP 2026-07-13"
+    },
+    {
+      "pair": "GBP/PLN",
+      "value": "5,0692",
+      "change": -0.59,
+      "dir": "dn",
+      "note": "średni kurs NBP 2026-07-13"
+    },
+    {
+      "pair": "EUR/USD",
+      "value": "1,1436",
+      "change": 0.05,
+      "dir": "up",
+      "note": "kurs krzyżowy z bieżącej tabeli NBP"
+    },
+    {
+      "pair": "CHF/PLN",
+      "value": "4,6826",
+      "change": -0.7,
+      "dir": "dn",
+      "note": "średni kurs NBP 2026-07-13"
+    }
   ],
-  commodities: [
-    { name:"Ropa Brent", value:"~$95", change:0.0, dir:"nt", note:"okolice 95 USD/bbl, rynek czeka na OPEC+ i Hormuz" },
-    { name:"Zloto", value:"~$4 490", change:-0.2, dir:"dn", note:"miesieczna migawka BMO / rynek metali" },
-    { name:"Miedz", value:"~$6,27/lb", change:1.57, dir:"up", note:"metal wspierany popytem infrastruktury AI" },
-    { name:"Gaz TTF", value:"b/d", change:0.0, dir:"nt", note:"brak jednolitego odczytu w uzytych zrodlach" }
+  "forexYearly": {
+    "labels": [
+      "lip'25",
+      "sie",
+      "wrz",
+      "paz",
+      "lis",
+      "gru",
+      "sty'26",
+      "lut",
+      "mar",
+      "kwi",
+      "maj",
+      "cze",
+      "lip'26"
+    ],
+    "eurpln": [
+      4.28,
+      4.3,
+      4.27,
+      4.22,
+      4.2,
+      4.18,
+      4.15,
+      4.2,
+      4.22,
+      4.25,
+      4.24,
+      4.24,
+      4.3281
+    ],
+    "usdpln": [
+      3.92,
+      3.88,
+      3.85,
+      3.8,
+      3.75,
+      3.72,
+      3.7,
+      3.72,
+      3.7,
+      3.68,
+      3.66,
+      3.65,
+      3.7846
+    ],
+    "gbppln": [
+      5.05,
+      5.1,
+      5.08,
+      5.05,
+      5.02,
+      4.98,
+      4.95,
+      5,
+      5.05,
+      5.08,
+      5.07,
+      5.05,
+      5.0692
+    ]
+  },
+  "commodities": [
+    {
+      "name": "Złoto",
+      "value": "$4021/oz",
+      "change": -1.22,
+      "dir": "dn",
+      "note": "automatyczny odczyt Yahoo Finance · 13 lip"
+    },
+    {
+      "name": "Ropa Brent",
+      "value": "$79,71/bbl",
+      "change": 2.17,
+      "dir": "up",
+      "note": "automatyczny odczyt Yahoo Finance · 13 lip"
+    },
+    {
+      "name": "Miedź",
+      "value": "$6,32/lb",
+      "change": 4.44,
+      "dir": "up",
+      "note": "automatyczny odczyt Yahoo Finance · 13 lip"
+    },
+    {
+      "name": "Pszenica",
+      "value": "$638,50 USc/bu",
+      "change": 6.51,
+      "dir": "up",
+      "note": "automatyczny odczyt Yahoo Finance · 13 lip"
+    }
   ],
-  topMovers: {
-    usa: {
-      gainers: [
-        { ticker:"INTC", name:"Intel Corp.", exchange:"NASDAQ", change:10.0, barPct:88, reason:"zamowienia AI i odbicie w polprzewodnikach" },
-        { ticker:"MRVL", name:"Marvell Technology", exchange:"NASDAQ", change:8.8, barPct:77, reason:"popyt na infrastrukture AI" },
-        { ticker:"MU", name:"Micron Technology", exchange:"NASDAQ", change:7.1, barPct:66, reason:"AI memory demand" },
-        { ticker:"AVGO", name:"Broadcom", exchange:"NASDAQ", change:5.9, barPct:58, reason:"silny sektor chipow" }
+  "commoditiesYearly": {
+    "labels": [
+      "lip'25",
+      "sie",
+      "wrz",
+      "paz",
+      "lis",
+      "gru",
+      "sty'26",
+      "lut",
+      "mar",
+      "kwi",
+      "maj",
+      "cze",
+      "lip'26"
+    ],
+    "gold": [
+      102,
+      97,
+      103,
+      109,
+      106,
+      112,
+      170,
+      155,
+      140,
+      133,
+      130,
+      126,
+      120
+    ],
+    "oil": [
+      98,
+      94,
+      92,
+      97,
+      104,
+      106,
+      104,
+      110,
+      135,
+      140,
+      120,
+      92,
+      98
+    ],
+    "copper": [
+      98,
+      93,
+      102,
+      107,
+      104,
+      111,
+      116,
+      120,
+      129,
+      133,
+      138,
+      139,
+      143
+    ],
+    "wheat": [
+      96,
+      95,
+      98,
+      102,
+      100,
+      105,
+      104,
+      102,
+      105,
+      107,
+      110,
+      111,
+      111
+    ]
+  },
+  "topMovers": {
+    "usa": {
+      "gainers": [
+        {
+          "ticker": "SKHY",
+          "name": "SK Hynix ADR",
+          "exchange": "NASDAQ · 10 lip",
+          "change": 13.1,
+          "barPct": 100,
+          "reason": "mocny debiut amerykańskich kwitów depozytowych"
+        },
+        {
+          "ticker": "WDFC",
+          "name": "WD-40 Company",
+          "exchange": "NASDAQ · 10 lip",
+          "change": 10.6,
+          "barPct": 81,
+          "reason": "zysk wyraźnie powyżej oczekiwań"
+        },
+        {
+          "ticker": "CRCL",
+          "name": "Circle Internet Group",
+          "exchange": "NYSE · 10 lip",
+          "change": 5,
+          "barPct": 38,
+          "reason": "zgoda regulatora USA na utworzenie banku powierniczego"
+        }
       ],
-      losers: [
-        { ticker:"ROIV", name:"Roivant Sciences", exchange:"NASDAQ", change:-3.8, barPct:43, reason:"presja po danych klinicznych" },
-        { ticker:"GO", name:"Grocery Outlet", exchange:"NYSE", change:-3.3, barPct:37, reason:"slabsza dynamika sprzedazy" },
-        { ticker:"PGR", name:"Progressive", exchange:"NYSE", change:-2.0, barPct:25, reason:"obawy o koszty szkod" },
-        { ticker:"XOM", name:"ExxonMobil", exchange:"NYSE", change:-1.4, barPct:18, reason:"spadek premii na ropie" }
+      "losers": [
+        {
+          "ticker": "SKHY",
+          "name": "SK Hynix ADR",
+          "exchange": "NASDAQ · 13 lip",
+          "change": -5.5,
+          "barPct": 100,
+          "reason": "realizacja zysków po piątkowym debiucie"
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "exchange": "NASDAQ · 13 lip",
+          "change": -4.1,
+          "barPct": 75,
+          "reason": "obawy o wyceny i trwałość popytu na AI"
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA Corp.",
+          "exchange": "NASDAQ · 13 lip",
+          "change": -1,
+          "barPct": 18,
+          "reason": "największe obciążenie dla S&P 500 w porannym handlu"
+        },
+        {
+          "ticker": "TSM",
+          "name": "TSMC ADR",
+          "exchange": "NYSE · 13 lip",
+          "change": -0.4,
+          "barPct": 8,
+          "reason": "słabszy handel w USA mimo mocnych danych o przychodach"
+        }
       ]
     },
-    gpw: {
-      gainers: [
-        { ticker:"PKN", name:"Orlen", exchange:"GPW", change:2.4, barPct:50, reason:"marze rafineryjne i energia" },
-        { ticker:"CDR", name:"CD Projekt", exchange:"GPW", change:2.0, barPct:42, reason:"lepszy sentyment do gamingu" },
-        { ticker:"DNP", name:"Dino Polska", exchange:"GPW", change:1.6, barPct:34, reason:"defensywny handel detaliczny" }
+    "gpw": {
+      "gainers": [
+        {
+          "ticker": "ORLEN",
+          "name": "Orlen",
+          "exchange": "GPW · 13 lip",
+          "change": 2.53,
+          "barPct": 100,
+          "reason": "skok ceny ropy wspiera notowania koncernu"
+        },
+        {
+          "ticker": "PGE",
+          "name": "PGE",
+          "exchange": "GPW · 13 lip",
+          "change": 0.96,
+          "barPct": 38,
+          "reason": "najmocniejsza spółka energetyczna poza Orlenem"
+        },
+        {
+          "ticker": "TPE",
+          "name": "Tauron",
+          "exchange": "GPW · 13 lip",
+          "change": 0.65,
+          "barPct": 26,
+          "reason": "dodatnia sesja segmentu energii"
+        }
       ],
-      losers: [
-        { ticker:"KGH", name:"KGHM", exchange:"GPW", change:-2.2, barPct:44, reason:"realizacja zyskow po miedzi" },
-        { ticker:"PKO", name:"PKO BP", exchange:"GPW", change:-1.4, barPct:28, reason:"slabszy sentyment do bankow" },
-        { ticker:"LPP", name:"LPP", exchange:"GPW", change:-1.1, barPct:22, reason:"presja na detal" }
+      "losers": [
+        {
+          "ticker": "MOD",
+          "name": "Modivo",
+          "exchange": "GPW · 13 lip",
+          "change": -2.17,
+          "barPct": 100,
+          "reason": "najsłabszy komponent WIG20 w popołudniowym odczycie"
+        },
+        {
+          "ticker": "DNP",
+          "name": "Dino Polska",
+          "exchange": "GPW · 13 lip",
+          "change": -1.45,
+          "barPct": 67,
+          "reason": "presja na handel detaliczny"
+        },
+        {
+          "ticker": "PZU",
+          "name": "PZU",
+          "exchange": "GPW · 13 lip",
+          "change": -1.35,
+          "barPct": 62,
+          "reason": "słabszy segment finansowy"
+        },
+        {
+          "ticker": "KGH",
+          "name": "KGHM",
+          "exchange": "GPW · 13 lip",
+          "change": -1.33,
+          "barPct": 61,
+          "reason": "poranna przecena miedzi ciąży kursowi"
+        }
       ]
     }
   },
-  macro: [
-    { icon:"↑", type:"pos", tag:"Pozytywny", title:"Deeskalacja wspiera ryzyko", explain:"Mniejsza premia geopolityczna przesuwa kapital w strone akcji, krypto i sektorow cyklicznych." },
-    { icon:"◆", type:"ind", tag:"Branzowy", title:"AI pozostaje glowna narracja", explain:"Najmocniejszy popyt skupia sie wokol polprzewodnikow, pamieci i infrastruktury centr danych." },
-    { icon:"↓", type:"neg", tag:"Negatywny", title:"Fed nie musi sie spieszyc", explain:"Silniejsze dane z rynku pracy obnizaja prawdopodobienstwo szybkich cieć stop, co wspiera dolara." },
-    { icon:"↑", type:"pos", tag:"Polska", title:"WIG20 dodatni intraday", explain:"Odczyt z poludnia pokazywal WIG20 +0,78%, przy stabilniejszym USD/PLN i lepszym sentymencie lokalnym." }
+  "macro": [
+    {
+      "icon": "↓",
+      "type": "neg",
+      "tag": "Geopolityka – Iran",
+      "title": "Ormuz ponownie podnosi premię za ryzyko",
+      "explain": "Weekendowa wymiana ataków USA–Iran i sprzeczne deklaracje dotyczące kontroli nad Cieśniną Ormuz podniosły Brent o 4,7% do ok. 79,6 USD. To wspiera spółki energetyczne, ale zwiększa ryzyko inflacyjne i presję na rentowności obligacji."
+    },
+    {
+      "icon": "↓",
+      "type": "neg",
+      "tag": "AI – Wyceny",
+      "title": "Półprzewodniki oddają część tegorocznych wzrostów",
+      "explain": "Micron tracił 4,1%, Nvidia 1,0%, a amerykańskie ADR-y SK Hynix 5,5%. Fundamenty popytu pozostają mocne, lecz rynek coraz uważniej porównuje tempo wzrostu z wysokimi wycenami i skalą planowanego capexu."
+    },
+    {
+      "icon": "◆",
+      "type": "ind",
+      "tag": "Wyniki – USA",
+      "title": "Start sezonu wyników banków",
+      "explain": "We wtorek raportują m.in. Bank of America, Citigroup, JPMorgan, Goldman Sachs i Wells Fargo. Konsensus FactSet zakłada wzrost zysków spółek S&P 500 o 23,6% r/r, więc poprzeczka dla rynku pozostaje wysoko."
+    },
+    {
+      "icon": "↑",
+      "type": "pos",
+      "tag": "Polska – NBP",
+      "title": "WIG20 stabilny mimo mocniejszego dolara",
+      "explain": "WIG20 wrócił nad kreskę po porannym spadku i około 16:43 wynosił 3 772,44 pkt. Kursy NBP to 4,3281 za euro i 3,7846 za dolara; wyższy USD/PLN może wspierać eksporterów, ale podnosi koszt importu surowców."
+    },
+    {
+      "icon": "↓",
+      "type": "neg",
+      "tag": "Obligacje – USA",
+      "title": "Rentowność 10-latki wraca do 4,59%",
+      "explain": "Rentowność amerykańskich obligacji 10-letnich wzrosła z 4,56% w piątek do 4,59% w poniedziałek. Rynek łączy droższą ropę z ryzykiem wyższej inflacji i bardziej restrykcyjnej polityki banków centralnych."
+    }
   ],
-  dailyChart: {
-    labels:["09:30","10:30","11:30","12:30","13:30","14:30","15:30","16:00"],
-    sp500:[0.00,0.05,0.12,0.10,0.18,0.24,0.28,0.30],
-    wig20:[0.00,0.14,0.28,0.35,0.48,0.61,0.72,0.78]
+  "dailyChart": {
+    "labels": [
+      "09:30",
+      "10:30",
+      "11:30",
+      "12:30",
+      "13:30",
+      "14:30",
+      "15:30",
+      "16:00"
+    ],
+    "sp500": [
+      0,
+      0.06,
+      0.12,
+      0.18,
+      0.25,
+      0.31,
+      0.38,
+      0.42
+    ],
+    "wig20": [
+      0,
+      -0.61,
+      -0.32,
+      -0.08,
+      0.04,
+      0.12,
+      0.1,
+      0.08
+    ]
   },
-  yearlyChart: {
-    labels:["cze","lip","sie","wrz","paz","lis","gru","sty","lut","mar","kwi","maj","cze"],
-    sp500:[100,103,99,105,108,106,113,116,112,118,121,124,124.4],
-    wig20:[100,101,97,99,96,94,98,102,101,104,106,105,105.8],
-    nasdaq:[100,104,101,108,112,109,118,122,119,127,131,135,136.2],
-    btc:[100,108,103,112,118,115,126,122,130,138,132,143,140.9]
+  "yearlyChart": {
+    "labels": [
+      "lip",
+      "sie",
+      "wrz",
+      "paz",
+      "lis",
+      "gru",
+      "sty",
+      "lut",
+      "mar",
+      "kwi",
+      "maj",
+      "cze",
+      "lip"
+    ],
+    "sp500": [
+      103,
+      99,
+      105,
+      108,
+      106,
+      113,
+      116,
+      112,
+      118,
+      121,
+      124,
+      126,
+      127.3
+    ],
+    "wig20": [
+      101,
+      97,
+      99,
+      96,
+      94,
+      98,
+      102,
+      101,
+      104,
+      106,
+      105,
+      106.4,
+      109
+    ],
+    "nasdaq": [
+      104,
+      101,
+      108,
+      112,
+      109,
+      118,
+      122,
+      119,
+      127,
+      131,
+      135,
+      139.3,
+      140.5
+    ],
+    "btc": [
+      108,
+      103,
+      112,
+      118,
+      115,
+      126,
+      122,
+      130,
+      138,
+      132,
+      143,
+      142.8,
+      144.1
+    ]
   },
-  yearlyEvents: [
-    { x:2, type:"neg", label:"Sie 25", title:"Ryzyko geopolityczne", text:"Podwyzszona zmiennosc i ucieczka do bezpiecznych aktywow." },
-    { x:4, type:"pos", label:"Paz 25", title:"Fed pauzuje", text:"Rynek wycenia koniec cyklu zaostrzania." },
-    { x:5, type:"neg", label:"Lis 25", title:"Europa slabnie", text:"Dane przemyslowe pogarszaja nastroje wobec regionu." },
-    { x:6, type:"pos", label:"Gru 25", title:"Euforia AI", text:"Technologia ciagnie indeksy na nowe maksima." },
-    { x:11, type:"ind", label:"Maj 26", title:"Mocne payrolls", text:"Dolar zyskuje, obligacje reaguja wzrostem rentownosci." }
+  "yearlyEvents": [
+    {
+      "x": 2,
+      "type": "neg",
+      "label": "Sie 25",
+      "title": "Ryzyko geopolityczne",
+      "text": "Podwyższona zmienność i ucieczka do bezpiecznych aktywów."
+    },
+    {
+      "x": 4,
+      "type": "pos",
+      "label": "Paz 25",
+      "title": "Fed w pauzę",
+      "text": "Rynek wycenia spowolnienie cyklu zacieśniania."
+    },
+    {
+      "x": 7,
+      "type": "neg",
+      "label": "Sty 26",
+      "title": "Złoto bije rekordy",
+      "text": "XAU/USD osiąga ~5 600 USD/oz — historyczne maksimum."
+    },
+    {
+      "x": 9,
+      "type": "neg",
+      "label": "Mar 26",
+      "title": "Konflikt USA–Iran",
+      "text": "Blokada Ormuz winduje ropę do 119 USD; giełdy w korekcie."
+    },
+    {
+      "x": 11,
+      "type": "pos",
+      "label": "Maj 26",
+      "title": "Ropa powyżej $100",
+      "text": "Eskalacja Iran; dolar zyska na sentymencie risk-off."
+    },
+    {
+      "x": 12,
+      "type": "neg",
+      "label": "Lip 26",
+      "title": "Ormuz i korekta AI",
+      "text": "Eskalacja podnosi ropę i rentowności; półprzewodniki oddają część wzrostów."
+    }
   ],
-  centralBanks: [
-    { bank:"Fed", rate:"4.50-4.75%", stance:"jastrzebio-neutralny", next:"rynek czeka na inflacje i payrolls" },
-    { bank:"ECB", rate:"3.75%", stance:"ostrozny", next:"tempo obnizek zalezne od uslug" },
-    { bank:"NBP", rate:"5.75%", stance:"wait-and-see", next:"presja plac i inflacja bazowa" },
-    { bank:"BoJ", rate:"0.25%", stance:"normalizacja", next:"uwaga na kurs jena" }
+  "centralBanks": [
+    {
+      "bank": "Fed (USA)",
+      "rate": "3,50–3,75%",
+      "stance": "Jastrzębio-neutralny",
+      "next": "Następne posiedzenie 28–29 lipca",
+      "changePt": "bez zmian w czerwcu",
+      "comment": "Droższa ropa i wzrost 10Y do 4,59% ograniczają przestrzeń do szybkiego luzowania."
+    },
+    {
+      "bank": "ECB (Strefa euro)",
+      "rate": "2,25%",
+      "stance": "Ostrożny",
+      "next": "Następne posiedzenie 23 lipca",
+      "changePt": "podwyżka w czerwcu",
+      "comment": "ECB reaguje na wtórne ryzyko inflacyjne związane z energią."
+    },
+    {
+      "bank": "NBP (Polska)",
+      "rate": "3,75%",
+      "stance": "Wait-and-see",
+      "next": "RPP obserwuje inflację i kurs złotego",
+      "changePt": "bez zmian w lipcu",
+      "comment": "Wyższy koszt energii i mocniejszy dolar utrudniają szybkie cięcia."
+    },
+    {
+      "bank": "BoJ (Japonia)",
+      "rate": "1,00%",
+      "stance": "Normalizacja",
+      "next": "Następne posiedzenie 30–31 lipca",
+      "changePt": "ostatnia decyzja: podwyżka",
+      "comment": "Wysokie rentowności JGB i słaby jen pozostają głównymi punktami uwagi."
+    },
+    {
+      "bank": "BoE (UK)",
+      "rate": "3,75%",
+      "stance": "Ostrożny",
+      "next": "Następna decyzja 30 lipca",
+      "changePt": "bez zmian 18 czerwca",
+      "comment": "Bank waży słabszy wzrost wobec ryzyka inflacji importowanej."
+    },
+    {
+      "bank": "SNB (Szwajcaria)",
+      "rate": "0,00%",
+      "stance": "Gołębi",
+      "next": "Następna decyzja 24 września",
+      "changePt": "stopa przy dolnej granicy",
+      "comment": "Silny frank i niska inflacja utrzymują łagodne nastawienie."
+    }
   ],
-  bonds10y: [
-    { country:"USA", yield:"4.42%", change:"+6 pb", dir:"up" },
-    { country:"Niemcy", yield:"2.58%", change:"+2 pb", dir:"up" },
-    { country:"Polska", yield:"5.62%", change:"+4 pb", dir:"up" },
-    { country:"Japonia", yield:"1.05%", change:"−1 pb", dir:"dn" }
+  "bonds10y": [
+    {
+      "country": "USA",
+      "yield": "4,59%",
+      "change": "+3 pb vs piątek",
+      "dir": "up"
+    },
+    {
+      "country": "Niemcy",
+      "yield": "~3,2%",
+      "change": "odczyt orientacyjny",
+      "dir": "up"
+    },
+    {
+      "country": "Polska",
+      "yield": "~5,36%",
+      "change": "odczyt z 9 lipca",
+      "dir": "dn"
+    },
+    {
+      "country": "Japonia",
+      "yield": "~2,7%",
+      "change": "okolice 29-letnich maksimów",
+      "dir": "up"
+    }
   ],
-  narrative: [
-    "Rynek 9 czerwca 2026 jest mieszany: Nasdaq i S&P 500 rosna, Dow lekko spada, a WIG20 w poludnie jest na plusie.",
-    "Glowna os narracji to technologia i polprzewodniki kontra presja rentownosci oraz slabsze krypto.",
-    "Dla Polski wazne jest to, ze zloty rano byl stabilniejszy, a WIG20 pokazywal dodatnia zmiane intraday."
+  "narrative": [
+    "S&P 500: 7546,89 pkt (+0,13%), Nasdaq: 26 057,90 pkt.",
+    "EUR/PLN według NBP: 4,3281, USD/PLN: 3,7846.",
+    "Dane zostały odświeżone automatycznie 13 lipca 2026 · poniedziałek o 09:00 czasu polskiego; notowania mogą pochodzić z ostatniej zakończonej sesji."
   ],
-  archive: [
-    { date:"2026-06-09", title:"USA mieszane: S&P 500 +0,30%, Nasdaq +0,86%, Dow -0,16%" },
-    { date:"2026-06-08", title:"Przygotowanie rynku pod dane i rotacje sektorowe" },
-    { date:"2026-06-07", title:"Krypto i surowce podwyzszonej zmiennosci" }
+  "archive": [
+    {
+      "date": "2026-07-13",
+      "title": "Automatyczna aktualizacja: S&P 500 0,13%, EUR/PLN 4,3281"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "S&P 500 +0,4%, Nasdaq +0,3%; mocny debiut SK Hynix ADR"
+    },
+    {
+      "date": "2026-06-21",
+      "title": "Warsh + Iran deal: S&P +1,08%, Brent -2,3%, Nasdaq liderem tech-rebound"
+    },
+    {
+      "date": "2026-06-18",
+      "title": "USA–Iran podpisują porozumienie; odbicie S&P/Nasdaq po wyprzedaży Warsha"
+    }
   ]
 };
-
-

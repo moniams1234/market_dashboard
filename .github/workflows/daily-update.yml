@@ -1,0 +1,45 @@
+name: Daily market data update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub używa UTC. Dwa uruchomienia + kontrola strefy w skrypcie
+    # zapewniają 09:00 Europe/Warsaw zarówno latem, jak i zimą.
+    - cron: "0 7 * * *"
+    - cron: "0 8 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-market-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Update market data
+        run: node scripts/update-market-data.mjs
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+
+      - name: Commit refreshed data
+        run: |
+          if git diff --quiet -- market_data.js; then
+            echo "No market data changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market_data.js
+          git commit -m "Update daily market data"
+          git push
