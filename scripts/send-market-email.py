@@ -47,7 +47,7 @@ def build_summary(data):
         f"krótkie podsumowanie rynku — {data.get('dateLabel', data.get('date', ''))}:\n\n"
         f"WALUTY\n{currency_lines}\n\n"
         f"SUROWCE\n{commodity_lines}\n\n"
-        f"Pełny dashboard: https://market-dashboard-moniam1234.vercel.app/\n\n"
+        f"Pełny dashboard: https://market-dashboard-git-main-moniams1234.vercel.app/\n\n"
         f"Dane mają charakter informacyjny i mogą pochodzić z ostatniej zakończonej sesji."
     )
 
